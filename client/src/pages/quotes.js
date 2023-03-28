@@ -6,7 +6,7 @@ import QuoteCard from '../containers/quote-card';
 
 const GET_QUOTES = gql`
 query GetQuotes {
-  quotesForHome {
+  quotes {
     id
     quotetext
     source
@@ -32,9 +32,9 @@ const Quotes = () => {
 
   return (
   <Layout grid>
-    {data?.quotesForHome?.map((quote) => (
+    {data?.quotes?.map((quote) => (
       <QuoteCard key={quote.id} quote={quote} />
-    ))}
+    ))}   
   </Layout>
   );
 };
