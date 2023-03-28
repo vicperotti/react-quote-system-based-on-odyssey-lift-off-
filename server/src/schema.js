@@ -1,10 +1,13 @@
-const gql = require("graphql-tag");
-const typeDefs = gql`
+import gql from "graphql-tag";
+export const typeDefs = gql`
   # Schema definitions go here
   "A track is a group of Modules that teaches about a specific topic"
   type Query {
     "Get quotes array for homepage grid"
-    quotesForHome: [Quote!]!
+    quotes: [Quote!]!
+    quote(id:ID!): Quote!
+    authors: [Author]
+    author(id:ID!): Author!
   }
   type Quote {
   id: ID!
@@ -20,4 +23,4 @@ type Author {
 }
 
 `;
-module.exports = typeDefs;
+
