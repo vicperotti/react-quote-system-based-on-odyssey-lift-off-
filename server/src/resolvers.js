@@ -28,8 +28,6 @@ export const resolvers = {
       };
     },
     addAuthor: async (_, { input }) => {
-      print("attempting to add author");
-      print(input);
       try {
         await Author.create({
           ...input,

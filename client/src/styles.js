@@ -1,7 +1,9 @@
 import React from 'react';
-import '@apollo/space-kit/reset.css';
-import { colors as SKColors } from '@apollo/space-kit/colors';
+//import '@apollo/space-kit/reset.css';
+//import { colors as SKColors } from '@apollo/space-kit/colors';
+import '@mui/material/colors';
 import { Global } from '@emotion/react';
+import { grey } from '@mui/material/colors';
 
 const breakpoints = [480, 768, 992, 1200];
 export const mq = breakpoints.map((bp) => `@media (min-width: ${bp}px)`);
@@ -12,16 +14,16 @@ export const widths = {
   regularPageWidth: 1100,
   textPageWidth: 800,
 };
-export const colors = {
-  primary: SKColors.indigo.base,
-  secondary: SKColors.teal.base,
-  accent: SKColors.pink.base,
-  background: SKColors.silver.light,
-  grey: SKColors.silver.dark,
-  text: SKColors.black.base,
-  textSecondary: SKColors.grey.dark,
-  ...SKColors,
-};
+// export const colors = {
+//   primary: SKColors.indigo.base,
+//   secondary: SKColors.teal.base,
+//   accent: SKColors.pink.base,
+//   background: SKColors.silver.light,
+//   grey: SKColors.silver.dark,
+//   text: SKColors.black.base,
+//   textSecondary: SKColors.grey.dark,
+//   ...SKColors,
+// };
 
 const GlobalStyles = () => (
   <Global
@@ -33,8 +35,8 @@ const GlobalStyles = () => (
         margin: 0,
         padding: 0,
         fontFamily: "'Source Sans Pro', sans-serif",
-        backgroundColor: colors.background,
-        color: colors.text,
+        backgroundColor: grey,
+        color: 'darkgray',
       },
       '#root': {
         display: 'flex',

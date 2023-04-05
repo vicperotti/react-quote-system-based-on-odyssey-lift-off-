@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { colors, mq } from '../styles';
+//import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
+import { green } from '@mui/material/colors';
 
 /**
  * Quote Card component renders basic info in a card format
@@ -36,7 +37,7 @@ export default QuoteCard;
 /** Track Card styled components */
 const CardContainer = styled.div({
   borderRadius: 6,
-  color: colors.text,
+  color: 'darkgray',
   backgroundSize: 'cover',
   backgroundColor: 'white',
   boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.15)',
@@ -44,21 +45,13 @@ const CardContainer = styled.div({
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'space-between',
-  [mq[0]]: {
-    width: '90%',
-  },
-  [mq[1]]: {
-    width: '47%',
-  },
-  [mq[2]]: {
-    width: '31%',
-  },
+
   height: 380,
   margin: 10,
   overflow: 'hidden',
   position: 'relative',
   ':hover': {
-    backgroundColor: colors.pink.lightest,
+    backgroundColor: green,
   },
   cursor: 'pointer',
 });
@@ -75,7 +68,7 @@ const CardTitle = styled.h3({
   fontSize: '1.4em',
   lineHeight: '1em',
   fontWeight: 700,
-  color: colors.text,
+  color: 'darkgray',
   flex: 1,
 });
 

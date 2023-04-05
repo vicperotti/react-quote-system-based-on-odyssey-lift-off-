@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
-import { colors, IconArrowRight, IconDoubleArrowRight } from '../styles';
+import {  IconArrowRight, IconDoubleArrowRight } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
 
 /**
@@ -48,9 +48,9 @@ const ModulesNavContainer = styled.div({
   width: '33%',
   position: 'relative',
   marginLeft: 20,
-  backgroundColor: colors.black.light,
+  backgroundColor: 'lightgray',
   borderRadius: 4,
-  border: `solid 1px ${colors.black.lighter}`,
+  border: `solid 1px ${lightgrey}`,
   overflow: 'auto',
 });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { widths, colors } from '../styles';
+//import { widths, colors } from '../styles';
+import { lightBlue } from '@mui/material/colors';
 
 /**
  * Content Section component renders content (mainly text/mdown based)
@@ -20,5 +21,5 @@ const ContentDiv = styled.div({
   maxWidth: widths.textPageWidth,
   width: '100%',
   alignSelf: 'center',
-  backgroundColor: colors.background,
+  backgroundColor: lightBlue,
 });

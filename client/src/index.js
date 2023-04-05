@@ -5,7 +5,7 @@ import Pages from './pages';
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: "https://4000-vicperotti-odysseylifto-str62002ogv.ws-us93.gitpod.io",
   cache: new InMemoryCache(),
   onError: ({ networkError, graphQLErrors }) => {
     console.log('graphQLErrors', graphQLErrors)
