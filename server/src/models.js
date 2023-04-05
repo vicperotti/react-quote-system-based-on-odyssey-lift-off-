@@ -47,6 +47,7 @@ Quote.belongsTo(Author);
 Author.hasMany(Quote);
 
 await dbConnection.sync({ force: true });
+//await sequelize.sync();
 
 // // seed the database!
 await Author.bulkCreate(authors);
