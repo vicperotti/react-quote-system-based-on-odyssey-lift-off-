@@ -1,7 +1,7 @@
 //import { quotes } from "../data/quotes.js";
 import { Quote, Author } from "./models.js";
 
-export const  resolvers = {
+export const resolvers = {
   Query: {
     quotes: async (parent, args) => {
       return await Quote.findAll({
@@ -18,4 +18,33 @@ export const  resolvers = {
       return await Author.findAll({ include: Quote });
     },
   },
-};
+  Mutation: {
+    addQuote: async (_, { input }) => {
+      await Quote.create({
+        ...input,
+      });
+      return {
+        success: true,
+      };
+    },
+    addAuthor: async (_, { input }) => {
+      print("attempting to add author");
+      print(input);
+      try {
+        await Author.create({
+          ...input,
+        });
+        return {
+          success: true,
+        };
+      } catch (err) {
+        return {
+          code: err.extensions.response.status,
+          success: false,
+          message: err.extensions.response.body,
+          track: null
+        };
+      }
+    }
+  }
+}
